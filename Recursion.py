@@ -22,7 +22,8 @@ def format_names(names):
     if("," in names[0]):
         arr.append(names[0])
     else:
-        arr.append(", ".join(names[0].split(" ")))
+        [first, last] = names[0].split(" ")
+        arr.append(", ".join([last, first]))
     if (len(names) == 1):
         return arr
     else:
@@ -30,10 +31,11 @@ def format_names(names):
 
 
 if(__name__ == "__main__"):
-    collatz_sequence(13)
-    print()
-    print_backwards("Hello, world!")
-    print()
-    print(hammer_profit(15.00, [14.00, 15.00, 17.00]))
-    print(hammer_profit(20.00, [19.00, 18.00, 23.00, 22.50, 15.00, 25.00]))
+    # collatz_sequence(13)
+    # print()
+    # print_backwards("Hello, world!")
+    # print()
+    # print(hammer_profit(15.00, [14.00, 15.00, 17.00]))
+    # print(hammer_profit(20.00, [19.00, 18.00, 23.00, 22.50, 15.00, 25.00]))
+    # print(format_names(["Allen Anderson", "Bruce Baker", "Cook, Claire", "Dunn, David"]))
     print(format_names(["Allen Anderson", "Bruce Baker", "Cook, Claire", "Dunn, David"]))
